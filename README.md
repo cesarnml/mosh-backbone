@@ -62,4 +62,7 @@
   - 3. Collections: A set of Models
   - 4. Views: Render models and listen for DOM/model events
   - 5. Routers: To create SPAs
--
+- `Models`:
+  - Containers for application data
+  - JS objects with changing tracking mechanism and pub/sub and ajax request to server
+    - `person.save({ success: () => {}})`
