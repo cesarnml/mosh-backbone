@@ -13,8 +13,8 @@
 - [x] ~~_Lesson 05_~~ [2025-03-22]
 - [x] ~~_Lesson 06_~~ [2025-03-22]
 - [x] ~~_Lesson 07_~~ [2025-03-22]
-- [ ] Lesson 08
-- [ ] Lesson 09
+- [x] ~~_Lesson 08_~~ [2025-03-24]
+- [x] ~~_Lesson 09_~~ [2025-03-24]
 - [ ] Lesson 10
 - [ ] Lesson 11
 - [ ] Lesson 12
@@ -66,3 +66,4 @@
   - Containers for application data
   - JS objects with changing tracking mechanism and pub/sub and ajax request to server
     - `person.save({ success: () => {}})`
+  - When a model is created `new Model()` Backbone automatically calls `model.initialize()` method
