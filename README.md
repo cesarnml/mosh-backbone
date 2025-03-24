@@ -3,6 +3,7 @@
 - [Backbone.js Cheatsheet](#backbonejs-cheatsheet)
   - [Lessons](#lessons)
   - [Notes](#notes)
+    - [Models](#models)
 
 ## Lessons
 
@@ -15,7 +16,7 @@
 - [x] ~~_Lesson 07_~~ [2025-03-22]
 - [x] ~~_Lesson 08_~~ [2025-03-24]
 - [x] ~~_Lesson 09_~~ [2025-03-24]
-- [ ] Lesson 10
+- [x] ~~_Lesson 10_~~ [2025-03-24]
 - [ ] Lesson 11
 - [ ] Lesson 12
 - [ ] Lesson 13
@@ -62,8 +63,30 @@
   - 3. Collections: A set of Models
   - 4. Views: Render models and listen for DOM/model events
   - 5. Routers: To create SPAs
+
+### Models
+
 - `Models`:
   - Containers for application data
   - JS objects with changing tracking mechanism and pub/sub and ajax request to server
     - `person.save({ success: () => {}})`
   - When a model is created `new Model()` Backbone automatically calls `model.initialize()` method
+  - Backbone Models are hash maps.
+    - Must use `.set` when setting Model attributes
+    - Read with `.get`
+    - Delete with `.unset`
+    - Delete all with `.clear`
+    - Get a JSON with `.toJSON`
+    - Check for attribute existence with `.has`
+    - When instantiating the model can use `.defaults` object to set default value for attributes
+    - `.validate()` method called whenever attributes are set on a model ... must return undefined or string if not valid; method is passed `model.attrs` as a parameter
+
+```js
+var Song = Backbone.Model.extend({
+  validate: function (attrs) {
+    if (!attrs.title) {
+      return "Title is required";
+    }
+  },
+});
+```
