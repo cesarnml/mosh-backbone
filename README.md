@@ -17,7 +17,7 @@
 - [x] ~~_Lesson 08_~~ [2025-03-24]
 - [x] ~~_Lesson 09_~~ [2025-03-24]
 - [x] ~~_Lesson 10_~~ [2025-03-24]
-- [ ] Lesson 11
+- [x] ~~_Lesson 11_~~ [2025-03-24]
 - [ ] Lesson 12
 - [ ] Lesson 13
 - [ ] Lesson 14
@@ -90,3 +90,5 @@ var Song = Backbone.Model.extend({
   },
 });
 ```
+
+- `Inheritance` from a Parent model can be done via the `var Child = Parent.extend()` method on the Parent class
